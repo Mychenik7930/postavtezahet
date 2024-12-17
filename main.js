@@ -23,3 +23,81 @@ const call_burger = document.querySelector(".call_burger");
 const call_tablet = document.querySelector(".call_tablet");
 const call_menu = document.querySelector(".call_menu");
 const call_menu_close = document.querySelector(".call_menu_close");
+
+const subtitle_1 = document.querySelector(".subtitle_1")
+const subtitle = document.querySelector(".subtitle")
+const subtitle_readmore = document.querySelector(".subtitle__readmore--list")
+const opened = document.querySelector (".opened")
+const subtitle_text = document.querySelector (".subtitle__readmore--text")
+const strelka = document.querySelector (".subtitle__readmore--list--icon")
+
+subtitle_readmore.addEventListener("click", () => {
+  
+  if (subtitle_1.classList.contains ("subtitle_1")){
+    subtitle_1.classList.remove("subtitle_1")
+    subtitle_text.textContent = "Свернуть"
+    strelka.classList.add ("rotate")
+  }
+  else {
+    subtitle_1.classList.add("subtitle_1")
+    subtitle_text.textContent = "Читать далее"
+    strelka.classList.remove ("rotate")
+  }
+
+})
+
+message.addEventListener("click", () => {              
+  message_menu.classList.add("message_menu_open");
+
+  message_menu_close.addEventListener("click", () => {
+    message_menu.classList.remove("message_menu_open");
+  });
+});
+
+message_burger.addEventListener("click", () => {              
+  message_menu.classList.add("message_menu_open");
+
+  message_menu_close.addEventListener("click", () => {
+    message_menu.classList.remove("message_menu_open");
+  });
+});
+
+message_tablet.addEventListener("click", () => {              
+  message_menu.classList.add("message_menu_open");
+
+  message_menu_close.addEventListener("click", () => {
+    message_menu.classList.remove("message_menu_open");
+  });
+});
+
+call.addEventListener("click", () => {              
+  call_menu.classList.add("call_menu_open");
+
+  call_menu_close.addEventListener("click", () => {
+    call_menu.classList.remove("call_menu_open");
+  });
+});
+
+call_burger.addEventListener("click", () => {          
+  call_menu.classList.add("call_menu_open");
+
+  call_menu_close.addEventListener("click", () => {
+    call_menu.classList.remove("call_menu_open");
+  });
+});
+
+call_tablet.addEventListener("click", () => {              
+  call_menu.classList.add("call_menu_open");
+
+  call_menu_close.addEventListener("click", () => {
+    call_menu.classList.remove("call_menu_open");
+  });
+});
+
+burger.addEventListener("click", () => {
+  test_menu.classList.add("test_menu_open");
+
+  close__button.addEventListener("click", () => {
+    test_menu.classList.remove("test_menu_open");
+  });
+});
