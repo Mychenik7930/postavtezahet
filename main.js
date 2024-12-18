@@ -101,3 +101,38 @@ burger.addEventListener("click", () => {
     test_menu.classList.remove("test_menu_open");
   });
 });
+
+lang.forEach((item) => {
+  item.addEventListener("click", (b) => {
+    lang.forEach((bl) => {
+      bl.classList.remove("lang_active");
+    });
+    item.classList.add("lang_active");
+  });
+});
+
+menu.forEach((item) => {
+  item.addEventListener("click", (b) => {
+    menu.forEach((bl) => {
+      bl.classList.remove("active");
+    });
+    item.classList.add("active");
+  });
+});
+
+Swiper.use([Pagination]);
+const swiper = new Swiper(".swiper", {
+  slidesPerView: "auto", // сколько слайдов показывать
+  spaceBetween: 16,
+  observer: true, // проверка находится ли элемент в области видимости
+  breakpoints: {
+    1119: {
+      enabled: false,
+    }, // значение когда нужно сломать swiper
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    type: "bullets",
+  },
+});
