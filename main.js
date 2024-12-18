@@ -31,20 +31,7 @@ const opened = document.querySelector (".opened")
 const subtitle_text = document.querySelector (".subtitle__readmore--text")
 const strelka = document.querySelector (".subtitle__readmore--list--icon")
 
-subtitle_readmore.addEventListener("click", () => {
-  
-  if (subtitle_1.classList.contains ("subtitle_1")){
-    subtitle_1.classList.remove("subtitle_1")
-    subtitle_text.textContent = "Свернуть"
-    strelka.classList.add ("rotate")
-  }
-  else {
-    subtitle_1.classList.add("subtitle_1")
-    subtitle_text.textContent = "Читать далее"
-    strelka.classList.remove ("rotate")
-  }
 
-})
 
 message.addEventListener("click", () => {              
   message_menu.classList.add("message_menu_open");
